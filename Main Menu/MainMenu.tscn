@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://kw3jd11hj0w4"]
+
+[ext_resource type="Script" uid="uid://cvqspvohlksml" path="res://world.gd" id="1_n72od"]
+[ext_resource type="Texture2D" uid="uid://dkwbq5hqkl77x" path="res://Asset/images.jpg" id="2_b61v4"]
+[ext_resource type="Texture2D" uid="uid://ckc74ew7efjbm" path="res://Menu Button/Menu_Button-removebg-preview.png" id="3_87fhq"]
+[ext_resource type="PackedScene" uid="uid://c6io86vuiqquu" path="res://Sound.tscn" id="4_xq18m"]
+[ext_resource type="PackedScene" uid="uid://dmofmlpk3bnqw" path="res://Fade_transition.tscn" id="5_n72od"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vivr"]
+atlas = ExtResource("3_87fhq")
+region = Rect2(144, 24, 120, 121.22452)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqm10"]
+atlas = ExtResource("3_87fhq")
+region = Rect2(412.13474, 150.53111, 140.10931, 140.24158)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rryik"]
+atlas = ExtResource("3_87fhq")
+region = Rect2(422.78186, 24, 121.21814, 120)
+
+[node name="World" type="Node2D" unique_id=798196083]
+scale = Vector2(3.095013, 3.1015763)
+script = ExtResource("1_n72od")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1841332145]
+offset_right = 623.41534
+offset_bottom = 335.8713
+scale = Vector2(1.8574967, 1.9659597)
+texture = ExtResource("2_b61v4")
+
+[node name="Button Manager" type="Control" parent="." unique_id=165454449]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="TextureButton" parent="Button Manager" unique_id=689551414]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 312.0
+offset_right = 483.0
+offset_bottom = 459.0
+scale = Vector2(1.2514664, 1.2959077)
+texture_normal = SubResource("AtlasTexture_1vivr")
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="TextureButton" parent="Button Manager" unique_id=882961502]
+layout_mode = 0
+offset_left = 495.99997
+offset_top = 296.0
+offset_right = 642.0
+offset_bottom = 438.0
+scale = Vector2(1.2084978, 1.24259)
+texture_normal = SubResource("AtlasTexture_gqm10")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="TextureButton" parent="Button Manager" unique_id=993139446]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 312.0
+offset_right = 818.0
+offset_bottom = 466.0
+scale = Vector2(1.2174274, 1.2772305)
+texture_normal = SubResource("AtlasTexture_rryik")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sound" parent="." unique_id=248194007 instance=ExtResource("4_xq18m")]
+
+[node name="Fade_transition" parent="." unique_id=1516008508 instance=ExtResource("5_n72od")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1208357814]
+
+[connection signal="pressed" from="Button Manager/Start" to="." method="Start"]
+[connection signal="pressed" from="Button Manager/Options" to="." method="Options"]
+[connection signal="pressed" from="Button Manager/Quit" to="." method="Quit"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
