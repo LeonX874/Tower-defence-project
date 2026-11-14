@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 Game="*res://Global/Game.gd"
 FadeTransition="*uid://dmofmlpk3bnqw"
+Sound="*uid://c6io86vuiqquu"
 
 [display]
 
