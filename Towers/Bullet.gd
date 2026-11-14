@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 var target
 var Speed = 1000
 var pathName = ""

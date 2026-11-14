@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="TD Project"
-run/main_scene="uid://6c6kewqbkigy"
+run/main_scene="uid://r1thegcnro6n"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://cauyatv0wkagq"
 
 [autoload]
 
