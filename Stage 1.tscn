@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://wseki4j7ojwy"]
+[gd_scene load_steps=3 format=3 uid="uid://wseki4j7ojwy"]
 
 [ext_resource type="PackedScene" uid="uid://jn2rceiqhdmc" path="res://Mobs/solider_a.tscn" id="2_n3pc2"]
 

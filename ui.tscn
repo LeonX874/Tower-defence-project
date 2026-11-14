@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://derl5ybj27dxd"]
+
+[ext_resource type="PackedScene" uid="uid://crnrm71rqmepv" path="res://Towers/RedTowerPanel.tscn" id="2_5wnq8"]
+
+[sub_resource type="GDScript" id="GDScript_fdl0b"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	self.text = \"Gold: \" + str(Game.Gold)
+"
+
+[sub_resource type="GDScript" id="GDScript_puusd"]
+script/source = "extends Label
+
+
+func _process(delta):
+	self.text = \"HP: \" + str(Game.Health)
+"
+
+[node name="UI" type="CanvasLayer" unique_id=1023345099]
+
+[node name="Panel" type="Panel" parent="." unique_id=1705881823]
+offset_left = 2944.0
+offset_right = 3584.0
+offset_bottom = 2048.0
+
+[node name="TowerContainer" type="VFlowContainer" parent="Panel" unique_id=549958508]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 235.0
+offset_bottom = 704.0
+scale = Vector2(3, 3)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="RedTowerPanel" parent="Panel/TowerContainer" unique_id=280637969 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
+[node name="RedTowerPanel2" parent="Panel/TowerContainer" unique_id=1913900339 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
+[node name="RedTowerPanel3" parent="Panel/TowerContainer" unique_id=1303113748 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
+[node name="Gold" type="Label" parent="." unique_id=1130746925]
+offset_left = 512.0
+offset_right = 1024.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 100
+text = "gold"
+script = SubResource("GDScript_fdl0b")
+
+[node name="Health" type="Label" parent="." unique_id=573922154]
+offset_right = 512.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 100
+text = "gold"
+script = SubResource("GDScript_puusd")
