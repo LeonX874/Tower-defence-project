@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dkwbq5hqkl77x" path="res://Asset/images.jpg" id="2_b61v4"]
 [ext_resource type="Texture2D" uid="uid://ckc74ew7efjbm" path="res://Menu Button/Menu_Button-removebg-preview.png" id="3_87fhq"]
 [ext_resource type="PackedScene" uid="uid://c6io86vuiqquu" path="res://Sound.tscn" id="4_xq18m"]
-[ext_resource type="PackedScene" uid="uid://dmofmlpk3bnqw" path="res://Fade_transition.tscn" id="5_n72od"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vivr"]
 atlas = ExtResource("3_87fhq")
@@ -67,12 +66,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Sound" parent="." unique_id=248194007 instance=ExtResource("4_xq18m")]
 
-[node name="Fade_transition" parent="." unique_id=1516008508 instance=ExtResource("5_n72od")]
-visible = false
-
-[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1208357814]
-
 [connection signal="pressed" from="Button Manager/Start" to="." method="Start"]
 [connection signal="pressed" from="Button Manager/Options" to="." method="Options"]
 [connection signal="pressed" from="Button Manager/Quit" to="." method="Quit"]
-[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

@@ -1,26 +1,12 @@
 extends Node2D
 
-var button_type = null
-
 func Start() -> void:
-	button_type= "Start"
 	print("Start")
-	$Fade_transition.show()
-	$Fade_transition/Fade_timer.start()
-	$Fade_transition/AnimationPlayer.play("Fade_out")
+	FadeTransition.change_scene("res://main.tscn")
 
 func Options() -> void:
-	button_type= "Options"
 	print("Options")
-	$Fade_transition.show()
-	$Fade_transition/Fade_timer.start()
-	$Fade_transition/AnimationPlayer.play("Fade_in")
+	FadeTransition.change_scene("res://main.tscn")
 
 func Quit() -> void:
 	get_tree().quit()
-
-func _on_fade_timer_timeout() -> void:
-	if button_type == "Start" :
-		get_tree().change_scene_to_file("res://main.tscn")
-	elif button_type == "Options" :
-		get_tree().change_scene_to_file("res://main.tscn")
