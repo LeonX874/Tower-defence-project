@@ -15,7 +15,11 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="TD Project"
+<<<<<<< HEAD
 run/main_scene="uid://f88ls3ol6oja"
+=======
+run/main_scene="uid://kw3jd11hj0w4"
+>>>>>>> 63c8df277aacad939dfb45468de24de2fc233f9f
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -26,7 +30,12 @@ buses/default_bus_layout="uid://cauyatv0wkagq"
 [autoload]
 
 Game="*res://Global/Game.gd"
+<<<<<<< HEAD
 Bgm="uid://dm51osmk4bh16"
+=======
+FadeTransition="*uid://dmofmlpk3bnqw"
+Sound="*uid://c6io86vuiqquu"
+>>>>>>> 63c8df277aacad939dfb45468de24de2fc233f9f
 
 [display]
 
