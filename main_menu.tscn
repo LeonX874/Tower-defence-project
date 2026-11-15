@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://f88ls3ol6oja"]
+
+[ext_resource type="Texture2D" uid="uid://delmp6knuukd3" path="res://Asset/images2.jpg" id="1_06t4h"]
+[ext_resource type="AudioStream" uid="uid://brbi2s3ye5bdj" path="res://Audio/Background Audio/MenuSong.mp3" id="1_qe12f"]
+[ext_resource type="Texture2D" uid="uid://b1dd3ayeeyuwl" path="res://Asset/panel_brown_damaged.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://sx8rtfibnij4" path="res://Menu Button/Menu_Button-removebg-preview(1).png" id="3_glbon"]
+[ext_resource type="FontFile" uid="uid://66atroba71qc" path="res://Font/Daydream DEMO.otf" id="3_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://bejgqlp1s2ch" path="res://Menu Button/Menu_Button-removebg-preview(2).png" id="4_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://cocv6kfl56nq3" path="res://Menu Button/Menu_Button-removebg-preview(3).png" id="5_qe12f"]
+
+[sub_resource type="FontVariation" id="FontVariation_jix8l"]
+base_font = ExtResource("3_nlkkf")
+
+[sub_resource type="GDScript" id="GDScript_wlarf"]
+script/source = "extends Button
+
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://main.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_nlkkf"]
+script/source = "extends Button
+
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://settings.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_apsbx"]
+script/source = "extends Button
+
+
+func _on_pressed():
+	get_tree().quit()
+"
+
+[node name="MainMenu" type="Node2D" unique_id=2024189073]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1756370925]
+offset_right = 3592.0
+offset_bottom = 2056.0
+texture = ExtResource("1_06t4h")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=853266862]
+offset_left = 472.0
+offset_top = 160.0
+offset_right = 3136.0
+offset_bottom = 1864.0
+texture = ExtResource("2_jix8l")
+
+[node name="Label2" type="Label" parent="." unique_id=1473569743]
+offset_left = 464.0
+offset_top = 533.0
+offset_right = 3183.0
+offset_bottom = 858.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_jix8l")
+theme_override_font_sizes/font_size = 148
+text = "TOWER DEFENSE "
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=825984922]
+offset_left = 464.0
+offset_top = 520.0
+offset_right = 3183.0
+offset_bottom = 845.0
+theme_override_colors/font_color = Color(0.67218095, 0.4035883, 0.21780625, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_jix8l")
+theme_override_font_sizes/font_size = 143
+text = "TOWER DEFENSE "
+horizontal_alignment = 1
+
+[node name="play" type="Button" parent="." unique_id=305129023]
+offset_left = 840.00006
+offset_top = 864.0
+offset_right = 964.00006
+offset_bottom = 988.0
+scale = Vector2(5, 5)
+theme_override_font_sizes/font_size = 200
+icon = ExtResource("3_glbon")
+flat = true
+script = SubResource("GDScript_wlarf")
+
+[node name="setting" type="Button" parent="." unique_id=86706582]
+offset_left = 1504.0
+offset_top = 864.00006
+offset_right = 1628.0
+offset_bottom = 988.00006
+scale = Vector2(5, 5)
+theme_override_font_sizes/font_size = 200
+icon = ExtResource("5_qe12f")
+flat = true
+script = SubResource("GDScript_nlkkf")
+
+[node name="quit" type="Button" parent="." unique_id=1106234288]
+offset_left = 2160.0002
+offset_top = 872.0
+offset_right = 2284.0002
+offset_bottom = 996.0
+scale = Vector2(5, 5)
+theme_override_font_sizes/font_size = 200
+icon = ExtResource("4_nlkkf")
+flat = true
+script = SubResource("GDScript_apsbx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=790190538]
+stream = ExtResource("1_qe12f")
+autoplay = true
+
+[connection signal="pressed" from="play" to="play" method="_on_pressed"]
+[connection signal="pressed" from="setting" to="setting" method="_on_pressed"]
+[connection signal="pressed" from="quit" to="quit" method="_on_pressed"]

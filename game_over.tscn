@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://b8jol7ih6rikg"]
+
+[ext_resource type="Script" uid="uid://cbt2rjb5vm1uf" path="res://game_over.gd" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://bchqemjhf7l4f" path="res://Asset/panel_brown_corners_b.png" id="2_yxx3c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ccer4"]
+content_margin_left = 196.0
+content_margin_top = 196.0
+content_margin_right = 172.0
+texture = ExtResource("2_yxx3c")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 24.0
+expand_margin_top = 24.0
+expand_margin_right = 24.0
+expand_margin_bottom = 24.0
+
+[node name="GameOver" type="Control" unique_id=1627169251]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y26ei")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1321175819]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect" unique_id=1664293066]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ccer4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/PanelContainer" unique_id=2076806868]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=966782093]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -919.9999
+offset_top = -839.99994
+offset_right = -827.9999
+offset_bottom = -816.99994
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(20, 20)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "GAME OVER"
+
+[node name="restart" type="Button" parent="." unique_id=368913493]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = -119.99994
+offset_right = -301.0
+offset_bottom = -88.99994
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+text = "RESTART"

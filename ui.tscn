@@ -50,6 +50,18 @@ layout_mode = 2
 [node name="RedTowerPanel3" parent="Panel/TowerContainer" unique_id=1303113748 instance=ExtResource("2_5wnq8")]
 layout_mode = 2
 
+[node name="RedTowerPanel4" parent="Panel/TowerContainer" unique_id=1179703082 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
+[node name="RedTowerPanel5" parent="Panel/TowerContainer" unique_id=243991999 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
+[node name="RedTowerPanel6" parent="Panel/TowerContainer" unique_id=1959927970 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
+[node name="RedTowerPanel7" parent="Panel/TowerContainer" unique_id=22240030 instance=ExtResource("2_5wnq8")]
+layout_mode = 2
+
 [node name="Gold" type="Label" parent="." unique_id=1130746925]
 offset_left = 512.0
 offset_right = 1024.0

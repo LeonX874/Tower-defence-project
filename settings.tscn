@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://di878hf2ujpvx"]
+
+[ext_resource type="Texture2D" uid="uid://delmp6knuukd3" path="res://Asset/images2.jpg" id="1_nkug2"]
+[ext_resource type="Texture2D" uid="uid://b1dd3ayeeyuwl" path="res://Asset/panel_brown_damaged.png" id="2_3ykye"]
+[ext_resource type="FontFile" uid="uid://66atroba71qc" path="res://Font/Daydream DEMO.otf" id="3_gc0em"]
+[ext_resource type="Texture2D" uid="uid://bejgqlp1s2ch" path="res://Menu Button/Menu_Button-removebg-preview(2).png" id="4_gc0em"]
+
+[sub_resource type="FontVariation" id="FontVariation_71mqq"]
+base_font = ExtResource("3_gc0em")
+
+[sub_resource type="GDScript" id="GDScript_gc0em"]
+script/source = "extends Button
+
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://main_menu.tscn\")
+"
+
+[node name="Settings" type="Node2D" unique_id=1546405874]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=115598997]
+offset_right = 3592.0
+offset_bottom = 2056.0
+texture = ExtResource("1_nkug2")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1749536559]
+offset_left = 472.0
+offset_top = 160.0
+offset_right = 3136.0
+offset_bottom = 1864.0
+texture = ExtResource("2_3ykye")
+
+[node name="Label2" type="Label" parent="." unique_id=86688877]
+offset_left = 464.0
+offset_top = 533.0
+offset_right = 3183.0
+offset_bottom = 858.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_71mqq")
+theme_override_font_sizes/font_size = 148
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=714978647]
+offset_left = 464.0
+offset_top = 520.0
+offset_right = 3183.0
+offset_bottom = 845.0
+theme_override_colors/font_color = Color(0.67218095, 0.4035883, 0.21780625, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_71mqq")
+theme_override_font_sizes/font_size = 143
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="back" type="Button" parent="." unique_id=1486325649]
+offset_left = 880.0
+offset_top = 552.0
+offset_right = 1004.0
+offset_bottom = 676.0
+scale = Vector2(1.5, 1.5)
+theme_override_font_sizes/font_size = 200
+icon = ExtResource("4_gc0em")
+flat = true
+script = SubResource("GDScript_gc0em")
+
+[connection signal="pressed" from="back" to="back" method="_on_pressed"]

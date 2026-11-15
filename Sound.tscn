@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c6io86vuiqquu"]
 
-[ext_resource type="AudioStream" uid="uid://dluh2t8gspwok" path="res://Audio/Background Audio/WhatsApp Audio 2026-11-14 at 12.46.37.mp3" id="1_wvsce"]
+[ext_resource type="AudioStream" uid="uid://brbi2s3ye5bdj" path="res://Audio/Background Audio/MenuSong.mp3" id="1_wvsce"]
 
 [node name="world" type="Node2D" unique_id=248194007]
 
